@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+
+<style>
+    input[type= "text"]{
+        width: 30%;
+        height: 1.5rem;
+    }
+    input[type= "submit"]{
+        background-color: green;
+        color: black;
+        margin: 1.2rem 1rem;
+        padding: 10px;
+    }
+    input[type="reset"]{
+        background-color: red;
+        color: black;
+        margin: 1.2rem 1rem;
+        padding: 10px;
+    }
+    input[type= "text"]:focus{
+        border-color: #4CAF50;
+        background-color: #f0f8f5;
+        outline: none;
+    }
+    input[type="email"]:invalid{
+        border-color: red;
+        background-color: #fdd;
+    }
+    input[type="email"]:valid{
+        border-color: green;
+        background-color: #e0f7e0;
+    }
+</style>
+
+<body>
+    <form action="">
+     <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input required id="nome" type="text" size="30" maxlength="30" placeholder="informe seu nome">
+
+        <label for="sobrenome">Sobrenome: </label>
+        <input required id="sobrenome" type="text" size="30" maxlength="30" placeholder="informe seu sobrenome"> <br> <br>
+
+        <label for="senha">Senha: </label>
+        <input id="senha" type="password" size="10" maxlength="8" placeholder="Informe a senha"> <br> <br>
+
+        <label for="email">Email: </label>
+        <input id="email" type="email" placeholder="informe o email"> <br><br>
+
+        <label>Sexo: </label><br>
+        <input id="feminino" name="genero" value="Feminino" type="radio"> <!-- comentário-->
+        <label for="feminino">Feminino</label><br>
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label><br> <br>
+        <input type="radio" id="nb" name="genero" value="Não-Binário">
+        <label for="nb">Não-Bináro</label>
+     </fieldset>   
+
+     <fieldset>
+        <legend>Dados Acadêmicos</legend>
+        <label>Cursos matriculados: </label><br>
+        <input type="checkbox" id="java" name="cursos" value="Java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="python" name="cursos" value="Python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="c" name="cursos" value="C">
+        <label for="c">C</label><br><br>
+
+        <label> Anexe seu comprovante de matrícula:</label>
+        <input type="file" multiple><br><br>
+
+        <label>Data do envio: </label>
+        <input type="date" min="2024-09-09" max="2024-09-16"><br><br>
+
+        <label for="">Telefone</label>
+        <input type="tel" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" placeholder="99-99999-9999"><br>
+
+        <label> Selecione o mês que deseja iniciar: </label>
+        <input type="month"><br><br>
+
+        <label>Estado</label><br>
+        <select>
+            <option value=""></option>
+            <option value="Ceará">Ceará</option>
+            <option value="São Paulo"></option>
+        </select>
+     </fieldset>
+
+     <fieldset>
+        <legend>Outras Informações</legend>
+        <label>Dúvidas:</label><br>
+        <textarea rows="15" cols="30"></textarea><br><br>
+        <input type="submit" value="Confirmar">
+        <input type="reset" value="Cancelar">
+     </fieldset>
+    </form>
+</body>
+</html>
